@@ -1,3 +1,7 @@
 export default function page() {
-  return <div>Settings</div>;
+  return (
+    <div className="text-center">
+      <h2 className=" text-4xl">Settings</h2>
+    </div>
+  );
 }

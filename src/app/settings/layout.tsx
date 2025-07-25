@@ -7,9 +7,13 @@ export default function SettingsLayout({
 }>) {
   return (
     <>
-      <nav className="flex justify-start gap-8">
-        <Link href={'/settings/user'}>Users setting</Link>
-        <Link href={'/settings/organization'}>Organization setting</Link>
+      <nav className="flex justify-start gap-8 p-5">
+        <Link href={'/settings/user'} className="hover:text-amber-300">
+          Users setting
+        </Link>
+        <Link href={'/settings/organization'} className="hover:text-amber-300">
+          Organization setting
+        </Link>
       </nav>
       {children}
     </>

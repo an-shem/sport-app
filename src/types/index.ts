@@ -9,11 +9,19 @@ export interface User {
   updatedAt: string;
 }
 
+export interface Category {
+  id: number;
+  name: string;
+  image: string;
+  slug: string;
+}
+
 export interface Product {
   id: number;
   title: string;
+  slug: string;
   price: number;
-  category: { id: number; name: string };
-  images: string[];
   description: string;
+  category: Category;
+  images: string[];
 }
