@@ -25,3 +25,12 @@ export interface Product {
   category: Category;
   images: string[];
 }
+
+export interface User {
+  id: number;
+  email: string;
+  password: string;
+  name: string;
+  role: string;
+  avatar: string;
+}
