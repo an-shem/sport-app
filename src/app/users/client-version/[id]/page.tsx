@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { ParamValue } from 'next/dist/server/request/params';
 import { useRouter } from 'next/navigation';
 
-export default function UserPage() {
+export default function UserPageClient() {
   const { id } = useParams();
   const [user, setUser] = useState<User | undefined>(undefined);
   const [message, setMessage] = useState('');

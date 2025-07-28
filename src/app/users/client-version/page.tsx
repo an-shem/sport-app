@@ -24,7 +24,7 @@ export default function UsersClientVersion() {
     <ul className="w-full flex flex-wrap gap-20 justify-center py-20 px-10 bg-[#f5f4fa] dark:bg-background">
       {users.map((user) => (
         <li key={user.id}>
-          <UserCard user={user} />
+          <UserCard user={user} url={`/users/client-version/${user.id}`} />
         </li>
       ))}
     </ul>

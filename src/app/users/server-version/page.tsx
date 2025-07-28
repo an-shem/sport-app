@@ -1,3 +1,5 @@
+import LinkBtn from '@/components/LinkBtn/LinkBtn';
+import UserCard from '@/components/UserCard/UserCard';
 import { User } from '@/types';
 import { revalidateTag } from 'next/cache';
 
@@ -32,11 +34,13 @@ const UsersServerVersion = async () => {
   //   console.log(users); // выведет на сервере
 
   return (
-    <div>
+    <ul className="w-full flex flex-wrap gap-20 justify-center py-20 px-10 bg-[#f5f4fa] dark:bg-background">
       {users.map((user: User) => (
-        <li key={user.id}>{user.name}</li>
+        <li key={user.id}>
+          <UserCard user={user} url={`/users/server-version/${user.id}`} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

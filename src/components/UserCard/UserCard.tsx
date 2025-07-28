@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import LinkBtn from '../LinkBtn/LinkBtn';
 
-export default function UserCard({ user }: { user: User }) {
+export default function UserCard({ user, url }: { user: User; url: string }) {
   return (
     <div
       className="
@@ -26,7 +26,7 @@ export default function UserCard({ user }: { user: User }) {
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">{user.name || 'No name'}</h3>
         <p className="text-sm text-gray-500 dark:text-gray-300 mb-1">{user.email}</p>
         <p className="font-bold text-sm text-gray-500 dark:text-gray-300 mb-5">{user.role}</p>
-        <LinkBtn url={user.id} title={'To user'} />
+        <LinkBtn url={url} title={'To user'} />
       </div>
     </div>
   );
