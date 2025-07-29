@@ -17,7 +17,6 @@ const ProductsClientVersion = () => {
       setProducts(data);
     } catch (error: unknown) {
       if (error instanceof Error) {
-        console.log(error.message);
       }
     }
   }

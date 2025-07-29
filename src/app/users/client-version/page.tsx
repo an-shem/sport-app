@@ -17,7 +17,6 @@ export default function UsersClientVersion() {
       throw new Error('Failed to fetch users');
     }
     const arr = await res.json();
-    console.log(arr);
     setUsers(arr);
   }
   return (

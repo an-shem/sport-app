@@ -10,7 +10,6 @@ export async function createProduct(formData: FormData) {
   const categoryId = formData.get('categoryId');
   const image = formData.get('image')?.toString();
   // валидация
-  // console.log(title, price, description, categoryId, image);
   const res = await fetch('https://api.escuelajs.co/api/v1/products/', {
     method: 'POST',
     body: JSON.stringify({ title, price, description, categoryId, images: [image] }),
