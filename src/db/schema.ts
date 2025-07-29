@@ -6,3 +6,9 @@ export const sportsTable = pgTable('sports', {
   image: varchar({ length: 255 }).notNull(),
   description: varchar({ length: 255 }).notNull(),
 });
+
+export const eventsTable = pgTable('events', {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  name: varchar({ length: 100 }).notNull(),
+  description: varchar({ length: 255 }).notNull(),
+});
