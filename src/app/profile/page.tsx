@@ -1,5 +1,5 @@
+import { authOptions } from '@/lib/auth/authOptions';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '../api/auth/[...nextauth]/route';
 import Image from 'next/image';
 
 export default async function Profile() {

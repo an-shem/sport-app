@@ -1,7 +1,6 @@
 import { db } from '@/db';
 import { eventsTable } from '@/db/schema';
 import { getServerSession } from 'next-auth';
-import { useSession } from 'next-auth/react';
 import { NextRequest, NextResponse } from 'next/server';
 import z from 'zod';
 
